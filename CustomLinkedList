@@ -1,0 +1,30 @@
+package customlinkedlist;
+import java.util.Scanner;
+public class CustomLinkedList {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter size of the list");
+        int size = input.nextInt();
+        
+        LinkedList<Integer> myList = new LinkedList<>();
+        
+	//fill the list with random values
+        for (int i = 0; i < size; i++) {
+            myList.addFirst((int) (Math.random() * 101));
+        }
+        
+	//printing original list
+        System.out.println("Starting values");
+        myList.print();
+        System.out.println("");
+        
+        myList.add(1, 23);
+        System.out.println("List with added value");
+        myList.print();
+        System.out.println("");
+        
+        System.out.println("List contains " + myList.getSize() + " values");
+    }
+    
+}
